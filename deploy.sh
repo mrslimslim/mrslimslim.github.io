@@ -7,7 +7,7 @@ set -e
 npm run docs:build
 rm -rf dist/*
 # 进入生成的文件夹
-cp -r docs/.vuepress/dist/ dist/
+cp -r docs/.vuepress/dist/ ./
 
 rm -rf docs/.vuepress/dist
 
