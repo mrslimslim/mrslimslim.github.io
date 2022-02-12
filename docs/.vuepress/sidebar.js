@@ -19,7 +19,8 @@ module.exports = {
       name: 'linked-list',
       collapsable: false,
       children: [
-        ['linked-list/reverse', '链表反转']
+        ['linked-list/reverse', '链表反转'],
+        ['linked-list/add-two-number', '两数相加']
       ]
     },
     {
