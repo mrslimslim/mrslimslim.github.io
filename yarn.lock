@@ -1388,7 +1388,7 @@
     "@vuepress/shared-utils" "1.9.7"
     "@vuepress/types" "1.9.7"
 
-"@vuepress/plugin-search@1.9.7", "@vuepress/plugin-search@^1.9.7":
+"@vuepress/plugin-search@1.9.7":
   version "1.9.7"
   resolved "https://registry.npmmirror.com/@vuepress/plugin-search/-/plugin-search-1.9.7.tgz#37a4714973ccac8c28837fc72a38ae0888d874bf"
   integrity sha512-MLpbUVGLxaaHEwflFxvy0pF9gypFVUT3Q9Zc6maWE+0HDWAvzMxo6GBaj6mQPwjOqNQMf4QcN3hDzAZktA+DQg==
@@ -8086,7 +8086,7 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   dependencies:
     smoothscroll-polyfill "^0.4.3"
 
-vuepress@^1.8.2:
+vuepress@^1.9.2:
   version "1.9.7"
   resolved "https://registry.npmmirror.com/vuepress/-/vuepress-1.9.7.tgz#2cd6709a2228f5cef588115aaeabf820ab9ed7cc"
   integrity sha512-aSXpoJBGhgjaWUsT1Zs/ZO8JdDWWsxZRlVme/E7QYpn+ZB9iunSgPMozJQNFaHzcRq4kPx5A4k9UhzLRcvtdMg==

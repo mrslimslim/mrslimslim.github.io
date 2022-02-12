@@ -28,7 +28,7 @@ module.exports = {
       collapsable: false,
       children: [
         ['sort/bubble-sort', '冒泡排序'],
-        ['sort/quick-sort', '快排']
+        ['sort/quick-sort', '快速排序']
       ]
     }
   ]
