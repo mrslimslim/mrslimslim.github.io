@@ -4,6 +4,12 @@ module.exports = {
   title: 'MrSlimSlim',
   description: 'MrSlimSlim Blog',
   displayAllHeaders: true,
+  plugins: [
+    '@vuepress/nprogress',
+    ['@vuepress/search', {
+      searchMaxSuggestions: 10
+    }]
+  ],
   configureWebpack: {
     resolve: {
       alias: {

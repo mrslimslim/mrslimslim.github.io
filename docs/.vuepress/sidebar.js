@@ -6,24 +6,30 @@ module.exports = {
       name: 'browser',
       collapsable: false,
       children: [
-        ['browser/','目录'],
-        ['browser/org','浏览器的架构']
+        ['browser/', '目录'],
+        ['browser/org', '浏览器的架构']
       ]
     }
   ],
   '/post/algorithm/': [
     ['', '介绍'],
+    ['add-two', '两数之和'],
     {
       title: '链表',
-      name: 'linkedlist',
+      name: 'linked-list',
       collapsable: false,
       children: [
-        ['linkedlist/reverse', '链表反转']
+        ['linked-list/reverse', '链表反转']
       ]
     },
     {
-      title: '',
-      name: '',
+      title: '排序算法',
+      name: 'sort',
+      collapsable: false,
+      children: [
+        ['sort/bubble-sort', '冒泡排序'],
+        ['sort/quick-sort', '快排']
+      ]
     }
   ]
 }

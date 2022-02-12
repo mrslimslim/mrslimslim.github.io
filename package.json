@@ -1,10 +1,14 @@
 {
   "scripts": {
     "docs:dev": "vuepress dev docs",
+    "dev": "npm run docs:dev",
     "docs:build": "vuepress build docs",
     "build": "sh deploy.sh"
   },
   "devDependencies": {
+    "@vuepress/plugin-nprogress": "^1.9.7",
+    "@vuepress/plugin-search": "^1.9.7",
     "vuepress": "^1.8.2"
-  }
+  },
+  "dependencies": {}
 }
