@@ -24,6 +24,14 @@ module.exports = {
       ]
     },
     {
+      title: '字符串',
+      name: 'string',
+      collapsable: false,
+      children: [
+        ['string/longest-palindrome', '最长子串']
+      ]
+    },
+    {
       title: '排序算法',
       name: 'sort',
       collapsable: false,
@@ -32,5 +40,5 @@ module.exports = {
         ['sort/quick-sort', '快速排序']
       ]
     }
-  ]
+  ],
 }
