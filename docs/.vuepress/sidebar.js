@@ -60,4 +60,18 @@ module.exports = {
       ]
     }
   ],
+  '/post/computer/': [
+    ['', '计算机基础'],
+    {
+      title: 'http相关',
+      name: 'http',
+      collapsable: false,
+      children: [
+        ['http/cache', 'http缓存'],
+        ['http/detail', 'http组成'],
+        ['http/safety', 'http安全'],
+        ['http/http2', 'http1.1和http2'],
+      ]
+    }
+  ]
 }
