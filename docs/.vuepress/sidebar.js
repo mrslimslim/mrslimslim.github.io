@@ -11,6 +11,18 @@ module.exports = {
       ]
     }
   ],
+  '/post/react/': [
+    ['', '介绍'],
+    ['redux', 'redux原理'],
+    {
+      title: 'react技术',
+      name: 'react-tech',
+      collapsable: false,
+      children: [
+        ['react-tech/hooks', 'hooks原理'],
+      ]
+    }
+  ],
   '/post/algorithm/': [
     ['', '介绍'],
     ['add-two', '两数之和'],
