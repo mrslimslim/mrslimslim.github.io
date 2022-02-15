@@ -28,6 +28,7 @@ module.exports = {
     ['add-two', '两数之和'],
     ['add-three', '三数之和'],
     ['shuffle', '洗牌算法'],
+    ['lazy-man', 'Lazyman算法'],
     {
       title: '链表',
       name: 'linked-list',
