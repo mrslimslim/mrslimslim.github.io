@@ -16,9 +16,39 @@ module.exports = {
       collapsable: false,
       children: [
         ['react/hooks', 'Hooks原理'],
-        ['react/redux', 'Redux']
+        ['react/redux', 'Redux'],
+        ['react/optimize', 'React优化']
       ]
-    }
+    },
+    {
+      title: 'Vue',
+      name: 'vue',
+      collapsable: false,
+      children: [
+        ['vue/feature3', 'Vue3新的特性'],
+        ['vue/keep-alive', 'keep-alive'],
+        ['vue/reactive', 'Vue响应式原理'],
+        ['vue/source','Vue源码分析']
+      ]
+    },
+    {
+      title: 'Webpack',
+      name: 'webpack',
+      collapsable: false,
+      children: [
+        ['web-pack/', 'webpack介绍'],
+        ['web-pack/loader', 'loader使用与原理'],
+        ['web-pack/plugin', 'plugin使用与原理'],
+      ]
+    },
+    {
+      title: '工程化',
+      name: '工程化',
+      collapsable: false,
+      children: [
+        ['engineering/module', '模块化(CommonJS,CMD,ESM)'],
+      ]
+    },
   ],
   '/post/algorithm/': [
     ['', '介绍'],

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vue源码解析 | MrSlimSlim</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="MrSlimSlim Blog">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.b4295b54.js" as="script"><link rel="preload" href="/assets/js/2.e83f1ab8.js" as="script"><link rel="preload" href="/assets/js/43.c82e1861.js" as="script"><link rel="prefetch" href="/assets/js/10.a1f164cb.js"><link rel="prefetch" href="/assets/js/11.4b0e517a.js"><link rel="prefetch" href="/assets/js/12.265adff4.js"><link rel="prefetch" href="/assets/js/13.1dbe9140.js"><link rel="prefetch" href="/assets/js/14.07493e03.js"><link rel="prefetch" href="/assets/js/15.4d61558f.js"><link rel="prefetch" href="/assets/js/16.e3db1df4.js"><link rel="prefetch" href="/assets/js/17.d8a08032.js"><link rel="prefetch" href="/assets/js/18.c86527be.js"><link rel="prefetch" href="/assets/js/19.33aaf428.js"><link rel="prefetch" href="/assets/js/20.eca3ae8b.js"><link rel="prefetch" href="/assets/js/21.10ba9209.js"><link rel="prefetch" href="/assets/js/22.387625dd.js"><link rel="prefetch" href="/assets/js/23.f5b69a54.js"><link rel="prefetch" href="/assets/js/24.d269b1ab.js"><link rel="prefetch" href="/assets/js/25.eaebbf2e.js"><link rel="prefetch" href="/assets/js/26.f7bc52d8.js"><link rel="prefetch" href="/assets/js/27.db10d54b.js"><link rel="prefetch" href="/assets/js/28.1f97b857.js"><link rel="prefetch" href="/assets/js/29.d697621e.js"><link rel="prefetch" href="/assets/js/3.9cc0f6ba.js"><link rel="prefetch" href="/assets/js/30.22f2a52a.js"><link rel="prefetch" href="/assets/js/31.efa4ce6e.js"><link rel="prefetch" href="/assets/js/32.51de9b44.js"><link rel="prefetch" href="/assets/js/33.89808612.js"><link rel="prefetch" href="/assets/js/34.0df3feee.js"><link rel="prefetch" href="/assets/js/35.02391d08.js"><link rel="prefetch" href="/assets/js/36.49032c4c.js"><link rel="prefetch" href="/assets/js/37.0268684d.js"><link rel="prefetch" href="/assets/js/38.2a96ddc3.js"><link rel="prefetch" href="/assets/js/39.eb107747.js"><link rel="prefetch" href="/assets/js/4.e407b4e5.js"><link rel="prefetch" href="/assets/js/40.69e7abb4.js"><link rel="prefetch" href="/assets/js/41.ca594fb6.js"><link rel="prefetch" href="/assets/js/42.3e27144b.js"><link rel="prefetch" href="/assets/js/44.f9896495.js"><link rel="prefetch" href="/assets/js/45.32896f37.js"><link rel="prefetch" href="/assets/js/46.a286ed8d.js"><link rel="prefetch" href="/assets/js/47.aec5f37a.js"><link rel="prefetch" href="/assets/js/5.588384c9.js"><link rel="prefetch" href="/assets/js/6.6514835b.js"><link rel="prefetch" href="/assets/js/7.8d6b2fd3.js"><link rel="prefetch" href="/assets/js/8.8a08482a.js"><link rel="prefetch" href="/assets/js/9.9f7d32a8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">MrSlimSlim</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/post/fe/" class="nav-link router-link-active">
+  前端知识
+</a></div><div class="nav-item"><a href="/post/algorithm/" class="nav-link">
+  算法总结
+</a></div><div class="nav-item"><a href="/post/computer/" class="nav-link">
+  计算机基础
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/post/fe/" class="nav-link router-link-active">
+  前端知识
+</a></div><div class="nav-item"><a href="/post/algorithm/" class="nav-link">
+  算法总结
+</a></div><div class="nav-item"><a href="/post/computer/" class="nav-link">
+  计算机基础
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/post/fe/" aria-current="page" class="sidebar-link">前端</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>浏览器</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/post/fe/browser/" class="sidebar-link">目录</a></li><li><a href="/post/fe/browser/org.html" class="sidebar-link">浏览器的架构</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>React</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/post/fe/react/hooks.html" class="sidebar-link">Hooks原理</a></li><li><a href="/post/fe/react/redux.html" class="sidebar-link">Redux</a></li><li><a href="/post/fe/react/optimize.html" class="sidebar-link">React优化</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/post/fe/vue/feature3.html" class="sidebar-link">Vue3新的特性</a></li><li><a href="/post/fe/vue/keep-alive.html" class="sidebar-link">keep-alive</a></li><li><a href="/post/fe/vue/reactive.html" class="sidebar-link">Vue响应式原理</a></li><li><a href="/post/fe/vue/source.html" aria-current="page" class="active sidebar-link">Vue源码分析</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Webpack</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/post/fe/web-pack/" class="sidebar-link">webpack介绍</a></li><li><a href="/post/fe/web-pack/loader.html" class="sidebar-link">loader使用与原理</a></li><li><a href="/post/fe/web-pack/plugin.html" class="sidebar-link">plugin使用与原理</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>工程化</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/post/fe/engineering/module.html" class="sidebar-link">模块化(CommonJS,CMD,ESM)</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue源码解析"><a href="#vue源码解析" class="header-anchor">#</a> Vue源码解析</h1></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/post/fe/vue/reactive.html" class="prev">
+        Vue响应式原理
+      </a></span> <span class="next"><a href="/post/fe/web-pack/">
+        webpack介绍
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.b4295b54.js" defer></script><script src="/assets/js/2.e83f1ab8.js" defer></script><script src="/assets/js/43.c82e1861.js" defer></script>
+  </body>
+</html>
