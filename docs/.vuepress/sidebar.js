@@ -9,17 +9,14 @@ module.exports = {
         ['browser/', '目录'],
         ['browser/org', '浏览器的架构']
       ]
-    }
-  ],
-  '/post/react/': [
-    ['', '介绍'],
-    ['redux', 'redux原理'],
+    },
     {
-      title: 'react技术',
-      name: 'react-tech',
+      title: 'React',
+      name: 'react',
       collapsable: false,
       children: [
-        ['react-tech/hooks', 'hooks原理'],
+        ['react/hooks', 'Hooks原理'],
+        ['react/redux', 'Redux']
       ]
     }
   ],
@@ -70,6 +67,7 @@ module.exports = {
       children: [
         ['http/cache', 'http缓存'],
         ['http/detail', 'http组成'],
+        ['http/cookie', 'http cookie'],
         ['http/safety', 'http安全'],
         ['http/http2', 'http1.1和http2'],
       ]
