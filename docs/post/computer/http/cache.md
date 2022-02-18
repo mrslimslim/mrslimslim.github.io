@@ -10,7 +10,7 @@
 
 强缓存和协商缓存
 
-强缓存不发送请求到服务器，根据保质期字段max-age，expire来判断是否缓存
+强缓存不发送请求到服务器，根据保质期字段max-age，Expires来判断是否缓存<br>
 协商缓存会请求服务，通过服务器来判断资源是否判断是否新鲜，相关的字段是if-none-match/etag,last-modified-since/last-modified
 
 强缓存 状态码 200
