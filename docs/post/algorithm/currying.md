@@ -30,7 +30,7 @@ B(3)    // print : 6
 
 1. 闭包
 2. 递归
-3. 判断: 形参和实参的长度
+3. 判断: 形参和实参的长度是否相等
 
 ### 代码实现
 
@@ -39,6 +39,7 @@ const curry = function(fn, ...args1) {
             if(args1.length === fn.length){
                 return fn(...args1)
             }else{
+                // 返回新函数去接新的参数
                 return (args2)=> {
                     return  curry(fn, ...args1, args2)
                 }
