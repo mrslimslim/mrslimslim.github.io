@@ -65,6 +65,7 @@ module.exports = {
     ['add-three', '三数之和'],
     ['shuffle', '洗牌算法'],
     ['lazy-man', 'Lazyman算法'],
+    ['currying', '函数柯里化'],
     {
       title: '链表',
       name: 'linked-list',
