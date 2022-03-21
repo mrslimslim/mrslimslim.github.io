@@ -28,7 +28,7 @@ module.exports = {
         ['vue/feature3', 'Vue3新的特性'],
         ['vue/keep-alive', 'keep-alive'],
         ['vue/reactive', 'Vue响应式原理'],
-        ['vue/source','Vue源码分析']
+        ['vue/source', 'Vue源码分析']
       ]
     },
     {
@@ -47,6 +47,15 @@ module.exports = {
       collapsable: false,
       children: [
         ['engineering/module', '模块化(CommonJS,CMD,ESM)'],
+      ]
+    },
+    {
+      title: 'WEB可视化',
+      name: 'web-visual',
+      collapsable: false,
+      children: [
+        ['web-visual/index', 'WEB可视化'],
+        ['web-visual/babylon-intro', 'babylon介绍'],
       ]
     },
   ],
