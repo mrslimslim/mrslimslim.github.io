@@ -66,6 +66,15 @@ const FE_CONFIG = [
       ['practice/css-theme', 'CSS主题设置'],
     ]
   },
+  {
+    title: 'WEB可视化',
+    name: 'web-visual',
+    collapsable: false,
+    children: [
+      ['web-visual/babylon-intro', 'babylon介绍'],
+      ['web-visual/shader', 'shader学习'],
+    ]
+  },
 ]
 
 const ALGORITHM_CONFIG =  [
@@ -75,6 +84,7 @@ const ALGORITHM_CONFIG =  [
   ['shuffle', '洗牌算法'],
   ['lazy-man', 'Lazyman算法'],
   ['currying', '函数柯里化'],
+  ['deep-clone', 'JS深拷贝'],
   {
     title: '链表',
     name: 'linked-list',
