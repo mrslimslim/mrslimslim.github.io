@@ -63,6 +63,7 @@ const FE_CONFIG = [
     collapsable: false,
     children: [
       ['practice/upload', '大文件上传'],
+      ['practice/event-tracking', '前端数据埋点实现'],
       ['practice/css-theme', 'CSS主题设置'],
       ['practice/shuiyin', 'web水印处理方案'],
     ]
