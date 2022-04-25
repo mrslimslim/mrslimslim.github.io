@@ -22,3 +22,6 @@ dto + pipe 数据校验
 生产密码hash 使用argon2
 
 防止重复注册使用prisma @@map  通过@relation，关联父节点
+
+passportjs.org 查看校验策略
+jwt.io 查看jwt的编码过程

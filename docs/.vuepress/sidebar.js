@@ -27,7 +27,7 @@ const FE_CONFIG = [
       ['vue/feature3', 'Vue3新的特性'],
       ['vue/keep-alive', 'keep-alive'],
       ['vue/reactive', 'Vue响应式原理'],
-      ['vue/source','Vue源码分析']
+      ['vue/source', 'Vue源码分析']
     ]
   },
   {
@@ -64,6 +64,7 @@ const FE_CONFIG = [
     children: [
       ['practice/upload', '大文件上传'],
       ['practice/css-theme', 'CSS主题设置'],
+      ['practice/shuiyin', 'web水印处理方案'],
     ]
   },
   {
@@ -77,7 +78,7 @@ const FE_CONFIG = [
   },
 ]
 
-const ALGORITHM_CONFIG =  [
+const ALGORITHM_CONFIG = [
   ['', '介绍'],
   ['add-two', '两数之和'],
   ['add-three', '三数之和'],
@@ -153,9 +154,14 @@ const LEADING_CONFIG = [
   }
 ]
 
+const DESIGN_CONFIG = [
+  ['', '设计模式'],
+]
+
 module.exports = {
   '/post/fe/': FE_CONFIG,
   '/post/algorithm/': ALGORITHM_CONFIG,
   '/post/computer/': COMPUTER_CONFIG,
-  '/post/leading/': LEADING_CONFIG
+  '/post/leading/': LEADING_CONFIG,
+  '/post/design/': DESIGN_CONFIG,
 }
