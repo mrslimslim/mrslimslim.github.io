@@ -1,5 +1,7 @@
 # Lazyman算法
 
+## 题目说明 & 示例
+
 > LazyMan('Tony'); <br/>
 > // Hi I am Tony<br/>
 > <br/>
@@ -21,4 +23,67 @@
 > // I am eating dinner<br/>
 > // 等待了10秒...<br/>
 > // I am eating junk food<br/>
->  
+
+## 解题思路
+
+1. 由闭包组成的任务队列
+2. setTimeout 宏任务 执行顺序
+3. 任务队列控制执行顺序
+4. IIFE(Immediately Invoke Fucntion Expression)结合闭包保存传参
+
+## 代码实现
+
+```js
+class LazyManClass {
+    constructor(name){
+        this.taskList = [];
+        console.log('I am ' + name);
+        setTimeout(()=>{
+            this.next();
+        })
+        return this;
+    }
+
+    eat(food){
+        const fn = ((n)=>{
+            return ()=>{
+                console.log('I am eat ' + n);
+                this.next();
+            }
+        })(food);
+        this.taskList.push(fn);
+        return this;
+    }
+
+    sleep(duration){
+        const fn = ((n)=>{
+            return ()=>{
+               setTimeout(()=>{
+                   console.log('I am sleeping ' +  n + ' ms');
+                    this.next();
+               }, n)
+            }
+        })(duration);
+        this.taskList.push(fn);
+        return this;
+    }
+
+    sleepFirst(duration){
+        const fn = ((n)=>{
+           return ()=>{
+               setTimeout(()=>{
+                   console.log('I am sleeping ' +  n + ' ms');
+                    this.next();
+               }, n)
+            }
+        })(duration);
+        this.taskList.unshift(fn);
+        return this;
+    }
+
+    next(){
+        const fn = this.taskList.shift();
+        fn && fn();
+    }
+} 
+```

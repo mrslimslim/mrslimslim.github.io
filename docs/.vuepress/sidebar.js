@@ -62,6 +62,10 @@ const FE_CONFIG = [
     name: 'practice',
     collapsable: false,
     children: [
+      ['practice/electron-ffi', 'electron调用ffi'],
+      ['practice/screen-responsive', '大屏响应式'],
+      ['practice/water-print', '页面水印方案'],
+      ['practice/webassembly', 'WebAssembly应用'],
       ['practice/upload', '大文件上传'],
       ['practice/event-tracking', '前端数据埋点实现'],
       ['practice/css-theme', 'CSS主题设置'],
@@ -87,6 +91,8 @@ const ALGORITHM_CONFIG = [
   ['lazy-man', 'Lazyman算法'],
   ['currying', '函数柯里化'],
   ['deep-clone', 'JS深拷贝'],
+  ['int-reverse', '整数反转'],
+  ['buy-stock', '股票最佳买卖时间'],
   {
     title: '链表',
     name: 'linked-list',
