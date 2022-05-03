@@ -93,6 +93,7 @@ const ALGORITHM_CONFIG = [
   ['deep-clone', 'JS深拷贝'],
   ['int-reverse', '整数反转'],
   ['buy-stock', '股票最佳买卖时间'],
+  ['buy-stock-2', '股票最佳买卖时间II'],
   {
     title: '链表',
     name: 'linked-list',
@@ -101,6 +102,15 @@ const ALGORITHM_CONFIG = [
       ['linked-list/reverse', '链表反转'],
       ['linked-list/add-two-number', '两数相加'],
       ['linked-list/merge-linked-list', '合并两个有序链表']
+    ]
+  },
+  {
+    title: '数组',
+    name: 'array',
+    collapsable: false,
+    children: [
+      ['array/removeDuplicates', '删除排序数组中的重复项'],
+      ['array/rotate-array', '旋转数组']
     ]
   },
   {

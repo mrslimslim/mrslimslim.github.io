@@ -17,16 +17,21 @@
 
 ### 解题思路
 
-1. xxx
-2. jjj
+1. 实际上是左侧的数值与右侧的最大差值
+2. 我们要记录左侧的最小值， 和我们输出的最大值
+3. 比较当前值和最小的值的差值(current - leftMin),和我们当前的值作对比，判断更新最大值
+4. 结束的时候更新最小值
 
-### 代码
+### 代码实现
 
 ```js
 function buyStock(arr){
-    let result = 0;
-    for(let i = 0 ; i < arr.length ; i ++){
-
+    let result = 0,leftMin = arr[0];
+    for(let i = 1 ; i < arr.length ; i ++){
+        if(arr[i] - leftMin > result){
+           result = arr[i] - leftMin;
+        }
+        leftMin = Math.min(leftMin, arr[i]); 
     }
     return result;
 }
