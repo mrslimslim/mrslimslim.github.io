@@ -50,6 +50,14 @@ const FE_CONFIG = [
     ]
   },
   {
+    title: '性能优化',
+    name: '性能优化',
+    collapsable: false,
+    children: [
+      ['performance/', '前端性能优化'],
+    ]
+  },
+  {
     title: 'TypeScript',
     name: 'typescript',
     collapsable: false,
@@ -70,6 +78,7 @@ const FE_CONFIG = [
       ['practice/event-tracking', '前端数据埋点实现'],
       ['practice/css-theme', 'CSS主题设置'],
       ['practice/shuiyin', 'web水印处理方案'],
+      // ['practice/low-code', '如何实现一个低代码平台'],
     ]
   },
   {
@@ -148,6 +157,7 @@ const COMPUTER_CONFIG = [
       ['http/cookie', 'http cookie'],
       ['http/safety', 'http安全'],
       ['http/http2', 'http1.1和http2'],
+      ['http/dns', 'DNS解析原理'],
     ]
   }
 ]
