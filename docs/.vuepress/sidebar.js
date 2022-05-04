@@ -6,7 +6,8 @@ const FE_CONFIG = [
     collapsable: false,
     children: [
       ['browser/', '目录'],
-      ['browser/org', '浏览器的架构']
+      ['browser/org', '浏览器的架构'],
+      ['browser/prefetch-preload', 'prefetch和preload']
     ]
   },
   {
@@ -127,6 +128,8 @@ const ALGORITHM_CONFIG = [
     name: 'string',
     collapsable: false,
     children: [
+      ['string/big-add', '大数相加'],
+      ['string/small-add', '小数相加'],
       ['string/longest-palindrome', '最长子串'],
       ['string/length-of-longest-substring', '无重复字符串的最长字串'],
       ['string/youxiaokuohao', '有效括号'],
@@ -140,7 +143,6 @@ const ALGORITHM_CONFIG = [
     children: [
       ['sort/bubble-sort', '冒泡排序'],
       ['sort/quick-sort', '快速排序'],
-      ['sort/binary-sort', '二分排序']
     ]
   }
 ]

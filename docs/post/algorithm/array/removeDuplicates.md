@@ -29,7 +29,7 @@
 ```js
 function removeDuplicates(nums){
     if(nums.length <= 1) return nums.length;
-    let pl = 0 ,pr = 0;
+    let pl = 0 ,pr = 1;
     for(let i = 0; i < nums.length - 1; i++ ){
         if(nums[pr-1] !== nums[pr]){
             pl++;
