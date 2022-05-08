@@ -115,6 +115,15 @@ const ALGORITHM_CONFIG = [
     ]
   },
   {
+    title: '二叉树',
+    name: 'tree',
+    collapsable: false,
+    children: [
+      ['tree/preOrder', '二叉树的前序遍历'],
+      ['tree/postOrder', '二叉树的后序遍历'],
+    ]
+  },
+  {
     title: '数组',
     name: 'array',
     collapsable: false,
