@@ -28,7 +28,8 @@ const FE_CONFIG = [
       ['vue/feature3', 'Vue3新的特性'],
       ['vue/keep-alive', 'keep-alive'],
       ['vue/reactive', 'Vue响应式原理'],
-      ['vue/source', 'Vue源码分析']
+      ['vue/source', 'Vue源码分析'],
+      ['vue/performance', 'Vue性能优化']
     ]
   },
   {
