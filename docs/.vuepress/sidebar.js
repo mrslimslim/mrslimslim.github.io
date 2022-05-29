@@ -189,6 +189,7 @@ const LEADING_CONFIG = [
     name: 'rust',
     collapsable: false,
     children: [
+      ['rust/data_type', 'Rust中的数据类型'],
     ]
   }
 ]
