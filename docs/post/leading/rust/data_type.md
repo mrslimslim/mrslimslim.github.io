@@ -36,3 +36,5 @@ let str_slice1 = str.as_str();
 let str_slice2 = &str;
 let str_slice3 = &str[..];
 ```
+
+## enum 枚举数据类型

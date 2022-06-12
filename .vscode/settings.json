@@ -1,6 +1,8 @@
 {
   "cSpell.words": [
     "prefetch",
+    "println",
+    "struct",
     "treeshaking",
     "vuepress",
     "webassembly"
