@@ -31,7 +31,7 @@ var reverseList = function(head) {
         let next = curr.next;
         // 当前节点指向 prev
         curr.next = prev;
-
+        // 更新新链表
         prev = curr;
 
         curr = next;

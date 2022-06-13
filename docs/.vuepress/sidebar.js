@@ -11,10 +11,21 @@ const FE_CONFIG = [
     ]
   },
   {
+    title: 'JavaScript',
+    name: 'javascript',
+    collapsable: false,
+    children: [
+      ['js/closure', '闭包'],
+      ['js/eventloop', '事件循环'],
+      ['js/prototype', '原型链']
+    ]
+  },
+  {
     title: 'React',
     name: 'react',
     collapsable: false,
     children: [
+      ['react/task', 'React优先级调度算法'],
       ['react/hooks', 'Hooks原理'],
       ['react/redux', 'Redux'],
       ['react/optimize', 'React优化']
@@ -72,6 +83,7 @@ const FE_CONFIG = [
     name: 'practice',
     collapsable: false,
     children: [
+      ['practice/axios-cancel-abort', 'axios封装重复请求abort'],
       ['practice/electron-ffi', 'electron调用ffi'],
       ['practice/screen-responsive', '大屏响应式'],
       ['practice/water-print', '页面水印方案'],
