@@ -1,7 +1,7 @@
 # keep-alive的用法和原理
 
 
-<keep-alive> 是 Vue 源码中实现的一个组件，也就是说 Vue 源码不仅实现了一套组件化的机制，也实现了一些内置组件，它的定义在 src/core/components/keep-alive.js 中
+keep-alive 是 Vue 源码中实现的一个组件，也就是说 Vue 源码不仅实现了一套组件化的机制，也实现了一些内置组件，它的定义在 src/core/components/keep-alive.js 中
 
 ```js
 export default {
@@ -79,14 +79,14 @@ export default {
 }
 ```
 
-## <keep-alive> 里面的关键属性
+## keep-alive 里面的关键属性
 
 1. **this.cache** 和**this.keys**
 2. **exclude**和**include**
 3. **max**，最大缓存数，避免占用大量内存
 
 
-注意，<keep-alive> 组件也是为观测 include 和 exclude 的变化，对缓存做处理：
+注意，keep-alive 组件也是为观测 include 和 exclude 的变化，对缓存做处理：
 
 ```js
 watch: {
@@ -117,7 +117,7 @@ function pruneCache (keepAliveInstance: any, filter: Function) {
 
 ## 组件渲染
 
-到此为止，我们只了解了 <keep-alive> 的组件实现，但并不知道它包裹的子组件渲染和普通组件有什么不一样的地方。我们关注 2 个方面，首次渲染和缓存渲染。
+到此为止，我们只了解了 keep-alive 的组件实现，但并不知道它包裹的子组件渲染和普通组件有什么不一样的地方。我们关注 2 个方面，首次渲染和缓存渲染。
 
 同样为了更好地理解，我们也结合一个示例来分析：
 
@@ -139,7 +139,7 @@ let B = {
 let vm = new Vue({
   el: '#app',
   template: '<div>' +
-  '<keep-alive>' +
+  'keep-alive' +
   '<component :is="currentComp">' +
   '</component>' +
   '</keep-alive>' +
@@ -188,7 +188,7 @@ function createComponent (vnode, insertedVnodeQueue, parentElm, refElm) {
 }
 ```
 
-createComponent 定义了 isReactivated 的变量，它是根据 vnode.componentInstance 以及 vnode.data.keepAlive 的判断，第一次渲染的时候，vnode.componentInstance 为 undefined，vnode.data.keepAlive 为 true，因为它的父组件 <keep-alive> 的 render 函数会先执行，那么该 vnode 缓存到内存中，并且设置 vnode.data.keepAlive 为 true，因此 **isReactivated** 为 false，那么走正常的 init 的钩子函数执行组件的 mount。当 vnode 已经执行完 patch 后，执行 initComponent 函数：
+createComponent 定义了 isReactivated 的变量，它是根据 vnode.componentInstance 以及 vnode.data.keepAlive 的判断，第一次渲染的时候，vnode.componentInstance 为 undefined，vnode.data.keepAlive 为 true，因为它的父组件 keep-alive 的 render 函数会先执行，那么该 vnode 缓存到内存中，并且设置 vnode.data.keepAlive 为 true，因此 **isReactivated** 为 false，那么走正常的 init 的钩子函数执行组件的 mount。当 vnode 已经执行完 patch 后，执行 initComponent 函数：
 
 ```js
 function initComponent (vnode, insertedVnodeQueue) {
@@ -210,7 +210,7 @@ function initComponent (vnode, insertedVnodeQueue) {
 }
 ```
 
-这里会有 vnode.elm 缓存了 vnode 创建生成的 DOM 节点。所以对于首次渲染而言，除了在 <keep-alive> 中建立缓存，和普通组件渲染没什么区别。
+这里会有 vnode.elm 缓存了 vnode 创建生成的 DOM 节点。所以对于首次渲染而言，除了在 keep-alive 中建立缓存，和普通组件渲染没什么区别。
 
 所以对我们的例子，初始化渲染 A 组件以及第一次点击 switch 渲染 B 组件，都是首次渲染。
 
@@ -219,7 +219,7 @@ function initComponent (vnode, insertedVnodeQueue) {
 
 当我们从 B 组件再次点击 switch 切换到 A 组件，就会命中缓存渲染。
 
-我们之前分析过，当数据发送变化，在 patch 的过程中会执行 patchVnode 的逻辑，它会对比新旧 vnode 节点，甚至对比它们的子节点去做更新逻辑，但是对于组件 vnode 而言，是没有 children 的，那么对于 <keep-alive> 组件而言，如何更新它包裹的内容呢？
+我们之前分析过，当数据发送变化，在 patch 的过程中会执行 patchVnode 的逻辑，它会对比新旧 vnode 节点，甚至对比它们的子节点去做更新逻辑，但是对于组件 vnode 而言，是没有 children 的，那么对于 keep-alive 组件而言，如何更新它包裹的内容呢？
 
 原来 patchVnode 在做各种 diff 之前，会先执行 prepatch 的钩子函数，它的定义在 src/core/vdom/create-component 中：
 
@@ -267,10 +267,10 @@ export function updateChildComponent (
 
 
 ## 生命周期
-之前我们提到，组件一旦被 <keep-alive> 缓存，那么再次渲染的时候就**不会执行 created、mounted 等钩子函数**，但是我们很多业务场景都是希望在我们被缓存的组件再次被渲染的时候做一些事情，好在 Vue 提供了 **activated 钩子函数，它的执行时机是 <keep-alive> 包裹的组件渲染的时候**，接下来我们从源码角度来分析一下它的实现原理。
+之前我们提到，组件一旦被 keep-alive 缓存，那么再次渲染的时候就**不会执行 created、mounted 等钩子函数**，但是我们很多业务场景都是希望在我们被缓存的组件再次被渲染的时候做一些事情，好在 Vue 提供了 **activated 钩子函数，它的执行时机是 keep-alive 包裹的组件渲染的时候**，接下来我们从源码角度来分析一下它的实现原理。
 
 在渲染的最后一步，会执行 invokeInsertHook(vnode, insertedVnodeQueue, isInitialPatch) 函数执行 vnode 的 insert 钩子函数，它的定义在 src/core/vdom/create-component.js 中：
 
 
 ## 总结
-那么至此，<keep-alive> 的实现原理就介绍完了，通过分析我们知道了 <keep-alive> 组件是一个抽象组件，它的实现通过自定义 render 函数并且利用了插槽，并且知道了 <keep-alive> 缓存 vnode，了解组件包裹的子元素——也就是插槽是如何做更新的。**且在 patch 过程中对于已缓存的组件不会执行 mounted**，所以不会有一般的组件的生命周期函数但是又提供了 activated 和 deactivated 钩子函数。另外我们还知道了 <keep-alive> 的 props 除了 include 和 exclude 还有文档中没有提到的 max，它能控制我们缓存的个数。
+那么至此，keep-alive 的实现原理就介绍完了，通过分析我们知道了 keep-alive 组件是一个抽象组件，它的实现通过自定义 render 函数并且利用了插槽，并且知道了 keep-alive 缓存 vnode，了解组件包裹的子元素——也就是插槽是如何做更新的。**且在 patch 过程中对于已缓存的组件不会执行 mounted**，所以不会有一般的组件的生命周期函数但是又提供了 activated 和 deactivated 钩子函数。另外我们还知道了 keep-alive 的 props 除了 include 和 exclude 还有文档中没有提到的 max，它能控制我们缓存的个数。
