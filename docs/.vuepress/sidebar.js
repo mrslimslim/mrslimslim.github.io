@@ -21,6 +21,14 @@ const FE_CONFIG = [
     ]
   },
   {
+    title: 'CSS',
+    name: 'css',
+    collapsable: false,
+    children: [
+      ['css/line-height', '行高和图片居中'],
+    ]
+  },
+  {
     title: 'React',
     name: 'react',
     collapsable: false,
