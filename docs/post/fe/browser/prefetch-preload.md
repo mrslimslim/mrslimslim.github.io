@@ -5,7 +5,7 @@
 preload 提供了一种声明式的命令，让浏览器可以提前加载高优先级资源(不执行)，在需要执行的时候执行。
 
 1. **将加载和执行分离**，不会阻塞 document 的 onload 事件
-2. 提升资源(font, style, javascript)加载的优先级，解决(优化)字体闪动的问题
+2. 提升资源(font, style, javascript)加载的优先级，解决如(优化)字体闪动的问题
 
 使用了 preload
 ![使用了preload](https://blog-1253253332.cos.ap-guangzhou.myqcloud.com/images/preload.png)
@@ -52,7 +52,7 @@ prefetch 针对页面中的一些必需但是低优先级的资源，比如非�
 
 1. 当资源被预加载的时候点击某个链接时，当前 prefetch 操作会被丢弃
 
-## dns-prefetch 介绍
+## dns-prefetch 介绍和使用
 
 *dns-prefetch(DNS 预获取)*是前端网络性能优化的一种措施。它根据浏览器定义的规则，提前解析之后可能会用到的域名，使解析结果缓存到系统缓存中，缩短 DNS 解析时间，进而提高网站的访问速度。
 
@@ -88,7 +88,7 @@ dns 虽然占用不了很多带宽，但是可能产生很高的延迟。
 
 3. 如果页面需要建立与许多第三方域的连接，则将它们预先连接会适得其反。 preconnect 提示最好仅用于最关键的连接。对于其他的，只需使用 `<link rel="dns-prefetch"/ >` 即可节省第一步的时间 DNS 查找。
 
-## preconnect
+## preconnect 介绍和使用
 
 总所周知，我们与服务器发生通信前会经过 dns 解析和初始化连接和 SSL 连接等步骤，但是 preconnect 能帮助我们提早建立与域的连接
 
