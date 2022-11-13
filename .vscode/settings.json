@@ -1,10 +1,14 @@
 {
   "cSpell.words": [
+    "alicdn",
+    "bilibili",
+    "FOUT",
     "prefetch",
     "println",
     "struct",
     "treeshaking",
     "vuepress",
     "webassembly"
-  ]
+  ],
+  "editor.formatOnSave": true
 }
