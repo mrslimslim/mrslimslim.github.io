@@ -8,6 +8,9 @@ const FE_CONFIG = [
       ["browser/", "目录"],
       ["browser/org", "浏览器的架构"],
       ["browser/prefetch-preload", "prefetch和preload"],
+      ["browser/init", "输入URL到渲染"],
+      ["browser/gc", "垃圾回收与定位内存泄漏"],
+      ["browser/debugger", "如何用浏览器DEBUGGER"],
     ],
   },
   {
@@ -57,7 +60,10 @@ const FE_CONFIG = [
     title: "工程化",
     name: "工程化",
     collapsable: false,
-    children: [["engineering/module", "模块化(CommonJS,CMD,ESM)"]],
+    children: [
+      ["engineering/module", "模块化(CommonJS,CMD,ESM)"],
+      ["engineering/tracking", "前端数据埋点方案"],
+    ],
   },
   {
     title: "性能优化",
@@ -95,6 +101,16 @@ const FE_CONFIG = [
       ["web-visual/babylon-intro", "babylon介绍"],
       ["web-visual/shader", "shader学习"],
     ],
+  },
+];
+
+const BE_CONFIG = [
+  ["", "后端"],
+  {
+    title: "nodejs",
+    name: "nodejs",
+    collapsable: false,
+    children: [["node/process", "在nodejs中使用线程和进程"]],
   },
 ];
 
@@ -203,4 +219,5 @@ module.exports = {
   "/post/computer/": COMPUTER_CONFIG,
   "/post/leading/": LEADING_CONFIG,
   "/post/design/": DESIGN_CONFIG,
+  "/post/be/": BE_CONFIG,
 };
