@@ -32,6 +32,8 @@ const FE_CONFIG = [
       ["vue/keep-alive", "keep-alive"],
       ["vue/reactive", "Vue响应式原理"],
       ["vue/performance", "Vue性能优化"],
+      ["vue/lifetime", "组件VNode的生命周期"],
+      ["vue/diff", "diff算法的演进"],
     ],
   },
   {
